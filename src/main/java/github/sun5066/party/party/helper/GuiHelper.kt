@@ -1,5 +1,6 @@
 package github.sun5066.party.party.helper
 
+import github.sun5066.party.party.events.BaseEvent
 import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.event.EventHandler
@@ -9,14 +10,13 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.SkullMeta
 import java.util.*
 
-class GuiHelper private constructor(private val mUuid: UUID) {
+object GuiHelper : BaseEvent() {
     private var mInventoryList: MutableList<Inventory> = ArrayList()
+    private var mUuid: UUID? = null
 
-    init {
-        init()
-    }
+    fun init(uuid: UUID) {
+        this.mUuid = uuid
 
-    private fun init() {
         this.setPartyList()
     }
 
@@ -31,8 +31,7 @@ class GuiHelper private constructor(private val mUuid: UUID) {
         }
     }
 
-    @EventHandler
-    fun clickEvent(inventoryClickEvent: InventoryClickEvent) {
-
+    override fun onInventoryClick(event: InventoryClickEvent) {
+        super.onInventoryClick(event)
     }
 }
