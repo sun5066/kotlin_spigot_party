@@ -1,6 +1,6 @@
 name: Party
-version: 1.00.001
+version: 1.01.001
 main: github.sun5066.party.party.Party
-api-version: 1.16
-authors: [ LIKE_SUN ]
-website: https://github.com/sun5066
+commands:
+  party:
+    description: asdasd

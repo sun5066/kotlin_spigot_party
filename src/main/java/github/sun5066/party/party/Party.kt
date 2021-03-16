@@ -9,7 +9,7 @@ class Party : JavaPlugin() {
     override fun onEnable() {
         // Plugin startup logic
         Bukkit.getPluginManager().registerEvents(Event(), this)
-        getCommand("example")?.setExecutor(Commands())
+        getCommand("party")?.setExecutor(Commands())
     }
 
     override fun onDisable() {
