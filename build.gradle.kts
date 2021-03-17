@@ -1,8 +1,8 @@
 import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
-    kotlin("jvm") version "1.4.20"
-    id("com.github.johnrengelman.shadow") version "5.0.0"
+    kotlin("jvm") version "1.4.30"
+    id("com.github.johnrengelman.shadow") version "5.1.0"
     application
 }
 
